@@ -145,6 +145,8 @@ def main(command_line=None):
     if not data_file:
         print("The data file name is absent", file=sys.stderr)
         sys.exit(1)
+
+    data_file = os.path.join("data", data_file)
     # Загрузить всех работников из файла, если файл существует.
     is_dirty = False
     if os.path.exists(data_file):
